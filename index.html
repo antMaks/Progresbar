@@ -6,7 +6,45 @@
     <title>ProgressBar</title>
 </head>
 <body>
-    
+
+    <div class="progress progress-bar"></div>
+    <div class="progress progress-bar2"></div>
+    <div class="progress progress-bar3"></div>
     <script src="main.js"></script>
+
+    <script>
+        const newBar = new ProgressBar({
+            start:0,
+            end:60,
+            bg:'green'
+
+        });
+        newBar.init('.progress-bar');
+
+        const newBar2 = new ProgressBar({
+            start:0,
+            end:80,
+            bg:'blue'
+            
+        });
+
+        newBar2.init('.progress-bar2');
+
+        const newBar3 = new RoundedProgressBar ({
+            start:0,
+            end:100,
+            bg:'red',
+            height :60,
+            lineHeight:60,
+            textColor:'black',
+            border: '3px solid green',
+            rounded: '30px'
+
+            
+        });
+
+        newBar3.init('.progress-bar3');
+       
+    </script>
 </body>
 </html>
